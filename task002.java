@@ -9,39 +9,22 @@
 // Пример 2: а = 11, b = 7, c = 2, d = 1
 // ответ: нет решения. 
 // * Подумать над тем, как сделать минимальное количество команд
-import java.util.Scanner;
 
 public class task002 {
     public static void main(String[] args) {
-        // вводим числа с клавиатуры
-        Scanner Scanner = new Scanner(System.in);
-        System.out.print("\n\nВведите число 'a': ");
-        int a = Scanner.nextInt();
-        System.out.print("Введите число 'b': ");
-        int b = Scanner.nextInt();
-        System.out.print("Введите число 'с' ('а' умножается на 'с'): ");
-        int c = Scanner.nextInt();
-        System.out.print("Введите число 'd' ('d' прибавляется к 'a'): ");
-        int d = Scanner.nextInt();
-        Scanner.close();
-        if (b < a) {
-            System.out.println("нет решения");
-        } else {
-            path(a, b, c, d, "" + a);
-        }
-
+        generate(1, 7, 1, 2, "");
     }
 
-    public static void path(int a, int b, int c, int d, String path) {
-        if (b < a) {
+    public static void generate(int source, int target, int c, int d, String path) {
+        if (source > target)
             return;
-        }
-        if (a == b) {
+        if (source == target) {
             System.out.println(path);
             return;
         }
-        path(a * c, b, c, d, (path + " * " + c));
-        path(a + d, b, c, d, (path + " + " + d));
+
+        generate(source + c, target, c, d, path + " k1");
+        generate(source * d, target, c, d, path + " k2");
 
     }
 
