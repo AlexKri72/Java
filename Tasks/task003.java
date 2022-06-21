@@ -1,3 +1,4 @@
+package Tasks;
 
 // Написать программу вычисления n-ого треугольного числа
 import java.util.Scanner;
