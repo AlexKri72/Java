@@ -13,7 +13,6 @@ public class task05 {
         int answer = random.nextInt(1, 100); // задаем случайное число в диапазоне от 1 до 100
         int tryCount = 0; // счетчик попыток
         int maxTryCount = 3; // максимально допустимое количестов попыток
-        boolean flag = false; // угадано или нет
 
         System.out.println(
                 "Здравствуйте, Вас приветствует игра 'Угадайка'!\nУгадайте число от 1 до 100. У Вас 3 попытки.\n");
@@ -22,6 +21,7 @@ public class task05 {
             Scanner in = new Scanner(System.in);
             System.out.print("Введите число: ");
             int userAnswer = in.nextInt();
+            in.close();
             tryCount += 1;
 
             if (userAnswer == answer) { // 1) попытка отгадать удалась
