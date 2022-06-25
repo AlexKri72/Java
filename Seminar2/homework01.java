@@ -14,7 +14,6 @@ public class homework01 {
         int max_massive = Scanner.nextInt();
         System.out.print("\n\nКакое число в промежутке от 1 до " + max_massive + " будем угадывать: ");
         int searh = Scanner.nextInt();
-
         Scanner.close();
 
         System.out.println("Количество попыток, минимально необходимых для угадывания: "
