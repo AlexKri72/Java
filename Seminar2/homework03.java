@@ -7,9 +7,12 @@
 
 package Seminar2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class homework03 {
+
+    static List<List<Integer>> massive = new ArrayList<>();
+
     public static void main(String[] args) {
 
         // МОЖНО ВКЛЮЧИТЬ РУЧНОЙ ВВОД
@@ -26,6 +29,11 @@ public class homework03 {
         word = word.replace(" ", ""); // убираем пробелы
         String[] words = word.split("="); // получили массив строк вида [2?,?5,69]
 
+        word = word.replace("=", ""); // получили строку вида "2??569", чтобы посчитать количество вопросительных
+                                      // знаков
+        int n = word.length() - word.replace("?", "").length(); // посчитали количество вопросительных знаков
+        System.out.println("Количество знаков '?' - " + n);
+
         int count = 0;
         for (int i = 0; i < 10; i++) { // заменяем "?" числами и проверяем выполнение условия выражения
             for (int j = 0; j < 10; j++) {
@@ -39,6 +47,19 @@ public class homework03 {
         }
         if (count == 0) {
             System.out.println("Решений нет\n");
+        }
+        generate(new int[n], 0, 10);
+    }
+
+    public static void generate(int[] comb, int index, int n) { // генерация массива чисел вида 0 0 , 0 1 . . . 9 9
+        if (comb.length == index) {
+            // massive.add(Arrays.asList(comb));
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            comb[index] = i;
+            generate(comb, index + 1, n);
         }
     }
 }
