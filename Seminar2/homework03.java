@@ -7,7 +7,6 @@
 
 package Seminar2;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class homework03 {
@@ -24,11 +23,8 @@ public class homework03 {
         System.out.println("\n\nЗадано выражение: " + word + " , его решения:");
 
         word = word.replace("+", "=");
-        String[] words = word.split("="); // получили массив строк вида [2? , ?5 , 69]
-
-        for (int i = 0; i < words.length; i++) { // убираем пробелы
-            words[i] = words[i].replace(" ", "");
-        }
+        word = word.replace(" ", ""); // убираем пробелы
+        String[] words = word.split("="); // получили массив строк вида [2?,?5,69]
 
         int count = 0;
         for (int i = 0; i < 10; i++) { // заменяем "?" числами и проверяем выполнение условия выражения
