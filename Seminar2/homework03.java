@@ -61,5 +61,54 @@ public class homework03 {
             comb[index] = i;
             generate(comb, index + 1, n);
         }
-    }
-}
+    }}
+
+    
+
+    
+    
+    
+    
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+            
+            
+                
+            
+        
+    
+
+    
+    
+    
+    
+    
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+            
+            
+                
+            
+        
+    
+    
+
+    
+
+    
