@@ -11,10 +11,12 @@ import java.util.Map;
 
 public class homework01 {
     public static void main(String[] args) {
-        Map<Integer, String> phoneBook = new HashMap();
-        phoneBook.put(212133, "Лидия Аркадьевна Бубликова");
-        phoneBook.put(162348, "Иван Михайлович Серебряков");
-        phoneBook.put(8082771, "Дональд Джон Трамп");
+        Map<Double, String> phoneBook = new HashMap();
+        // чтобы не заменял телефоны при попадании одинаковых фамилий, используем номера
+        // телефонов как ключи - ведь они уникальные
+        phoneBook.put(83452212133D, "Лидия Аркадьевна Бубликова");
+        phoneBook.put(83452162348D, "Иван Михайлович Серебряков");
+        phoneBook.put(83452082771D, "Дональд Джон Трамп");
         System.out.println(phoneBook);
     }
 }
