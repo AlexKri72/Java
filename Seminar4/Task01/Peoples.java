@@ -1,4 +1,4 @@
-package Seminar4;
+package Seminar4.Task01;
 
 public class Peoples {
     String name;
@@ -15,10 +15,10 @@ public class Peoples {
         this.spring_skiil = spring_skill;
     }
 
-    static Peoples people1 = new Peoples("Alex", 1, 9, 8, 8);
-    static Peoples people2 = new Peoples("Yuriy", 2, 5, 3, 5);
-    static Peoples people3 = new Peoples("Sergey", 3, 7, 9, 6);
-    static Peoples people4 = new Peoples("Ivan", 4, 3, 5, 8);
-    static Peoples people5 = new Peoples("Valentin", 5, 6, 7, 4);
-    static Peoples people6 = new Peoples("Mark", 6, 2, 4, 9);
+    static Peoples people1 = new Peoples("Сергей", 1, 6, 4, 7);
+    static Peoples people2 = new Peoples("Аленксандр", 2, 7, 9, 8);
+    static Peoples people3 = new Peoples("Юрий", 3, 4, 6, 5);
+    static Peoples people4 = new Peoples("Артур", 4, 7, 7, 8);
+    static Peoples people5 = new Peoples("Михаил", 5, 4, 7, 5);
+    static Peoples people6 = new Peoples("Данил", 6, 5, 5, 9);
 }

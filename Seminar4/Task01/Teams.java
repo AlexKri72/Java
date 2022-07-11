@@ -1,4 +1,4 @@
-package Seminar4;
+package Seminar4.Task01;
 
 public class Teams {
 
