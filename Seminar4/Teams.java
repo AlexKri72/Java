@@ -18,12 +18,12 @@ public class Teams {
     static Teams command_2 = new Teams("Wolf", players_2);
 
     static void commandInformation(Teams command) {
-        System.out.println("Команда: " + command.command_name);
+        System.out.println("\nКоманда: " + command.command_name);
         for (int i = 0; i < command.players.length; i++) {
             System.out.println("\tИмя: " + command.players[i].name);
             System.out.println("\t\tНавыки пловца:\t" + command.players[i].float_skill);
             System.out.println("\t\tНавыки бегуна:\t" + command.players[i].running_skill);
-            System.out.println("\t\tНавыки прыгуна:\t" + command.players[i].spring_skiil);
+            System.out.println("\t\tНавыки прыгуна:\t" + command.players[i].spring_skiil + "\n");
         }
     }
 }
