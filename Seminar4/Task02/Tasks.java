@@ -1,18 +1,28 @@
 package Seminar4.Task02;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
 public abstract class Tasks {
 
+    public static void PeopleInWork(Map<Integer, Tasks> waitingQueue) throws InterruptedException {
+        Integer[] aKeys = waitingQueue.keySet().toArray(new Integer[waitingQueue.size()]);
+        Integer firstKey = aKeys[0];
+        System.out
+                .println("В работе клиент с номером очереди " + firstKey + ". Задача - " + waitingQueue.get(firstKey));
+        Thread.sleep(waitingQueue.get(firstKey).time());
+        waitingQueue.remove(firstKey);
+    }
+
     public static Integer number(Map<Integer, Tasks> waitingQueue) { // метод не абстрактный, наследуется напрямую
         if (waitingQueue.isEmpty()) {
             return 1; // возврат сгенерированного значения
         } else {
-            return waitingQueue.size() + 1;
+            Integer[] aKeys = waitingQueue.keySet().toArray(new Integer[waitingQueue.size()]);
+            Integer lastKey = aKeys[waitingQueue.size()];
+            return lastKey + 1;
         }
 
     }

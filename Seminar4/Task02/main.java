@@ -2,10 +2,8 @@ package Seminar4.Task02;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,7 +27,6 @@ public class Main {
         for (int i = 0; i < 31; i++) {
             Tasks.PeopleInWaitLine(tasks, waitingQueue);
             Tasks.closeWindow();
-            Thread.sleep(waitingQueue.values());
 
             Tasks.PeopleOutWaitLine(waitingQueue);
             System.out.println("Очередь: " + waitingQueue);
