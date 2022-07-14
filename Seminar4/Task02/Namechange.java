@@ -1,7 +1,11 @@
 package Seminar4.Task02;
 
 public class Namechange extends Tasks {
-    String name = "Смена имени";
+
+    @Override
+    public void nameTask() {
+        System.out.println("Смена имени.");
+    }
 
     @Override
     public int prioritet() {

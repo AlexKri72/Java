@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Tasks passport = new Passport();
         Tasks inn = new Inn();
         Tasks namechange = new Namechange();
@@ -25,10 +25,12 @@ public class Main {
         Map<Integer, Tasks> waitingQueue = new LinkedHashMap<>();
 
         for (int i = 0; i < 31; i++) {
+            Tasks.PeopleInWork(waitingQueue);
+            System.out.println(waitingQueue);
             Tasks.PeopleInWaitLine(tasks, waitingQueue);
             Tasks.closeWindow();
-
             Tasks.PeopleOutWaitLine(waitingQueue);
+            Tasks.PeopleInWaitLine(tasks, waitingQueue);
             System.out.println("Очередь: " + waitingQueue);
         }
 

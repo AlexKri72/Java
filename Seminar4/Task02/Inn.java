@@ -1,7 +1,11 @@
 package Seminar4.Task02;
 
 public class Inn extends Tasks {
-    String name = "Получение ИНН";
+
+    @Override
+    public void nameTask() {
+        System.out.println("Получение ИНН.");
+    }
 
     @Override
     public int prioritet() {

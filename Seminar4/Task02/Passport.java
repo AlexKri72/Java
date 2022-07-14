@@ -1,7 +1,11 @@
 package Seminar4.Task02;
 
 public class Passport extends Tasks {
-    String name = "Получение паспорта";
+
+    @Override
+    public void nameTask() {
+        System.out.println("Получение паспорта.");
+    }
 
     @Override
     public int prioritet() {

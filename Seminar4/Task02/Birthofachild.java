@@ -1,7 +1,11 @@
 package Seminar4.Task02;
 
 public class Birthofachild extends Tasks {
-    String name = "Рождение ребенка";
+
+    @Override
+    public void nameTask() {
+        System.out.println("Рождение ребенка.");
+    }
 
     @Override
     public int prioritet() {

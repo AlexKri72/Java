@@ -1,7 +1,11 @@
 package Seminar4.Task02;
 
 public class Lossofdocument extends Tasks {
-    String name = "Утеря документов";
+
+    @Override
+    public void nameTask() {
+        System.out.println("Утеря документов.");
+    }
 
     @Override
     public int prioritet() {

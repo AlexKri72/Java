@@ -1,7 +1,11 @@
 package Seminar4.Task02;
 
 public class Retirement extends Tasks {
-    String name = "Выход на пенсию";
+
+    @Override
+    public void nameTask() {
+        System.out.println("Выход на пенсию.");
+    }
 
     @Override
     public int prioritet() {
