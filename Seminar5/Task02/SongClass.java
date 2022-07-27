@@ -1,5 +1,7 @@
 package Seminar5.Task02;
 
+import java.util.Comparator;
+
 public class SongClass {
     String songName;
     String executor;

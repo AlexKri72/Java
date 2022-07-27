@@ -9,14 +9,14 @@
  * - Количество прослушиваний
  */
 
-package Seminar5;
+package Seminar5.Task01;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class main {
+public class MainWithoutObjekt {
     public static void main(String[] args) {
 
         Map<String, Map<String, Integer>> playList = new HashMap<>();
